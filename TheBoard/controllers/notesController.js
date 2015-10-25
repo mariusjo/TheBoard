@@ -1,0 +1,4 @@
+﻿(function (notesController) {
+    
+}
+)(module.exports);
