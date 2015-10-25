@@ -1,0 +1,1 @@
+mongod -dbpath=C:\dev\projects\TheBoard\TheBoard\data --httpinterface --rest
