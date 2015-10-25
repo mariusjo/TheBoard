@@ -8,11 +8,20 @@
     "email": "mariusjohans@gmail.com"
   },
   "dependencies": {
+    "body-parser": "^1.14.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.0",
     "ejs": "^2.3.4",
     "ejs-locals": "^1.0.2",
     "express": "^4.13.3",
+    "express-session": "^1.11.3",
     "jade": "^1.11.0",
+    "mongodb": "^2.0.46",
     "underscore": "^1.8.3",
     "vash": "^0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-nodemon": "^0.4.0"
   }
 }
