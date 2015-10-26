@@ -33,8 +33,10 @@ var testing = null;
 app.set("view engine", "vash");
 
 //opt into services
-//needed in order to ge the body from a post
-app.use(bodyParser.urlencoded({extended: true}))
+//needed in order to ge the body from a form post
+app.use(bodyParser.urlencoded({ extended: true }));
+//needed in order to decode json enc. bodies
+app.use(bodyParser.json());
 //for temp. storing of info in session
 app.use(cookieParser());
 app.use(session({

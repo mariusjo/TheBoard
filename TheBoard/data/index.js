@@ -3,7 +3,32 @@
     var seedData = require("./seedData.js");
     
     var database = require('./database');
-
+    
+    data.addNote = function (categoryName, noteToInsert, next) {
+        database.getDb(function (err, db) {
+            if (err) {
+                next(err);
+            } else {
+                //Logically for the api, this is an insert. But for the document fo categoryname=categoryName,
+                //this is an update. we are updating the notes collection of the document.
+                db.notes.update({name:categoryName}, {$push:{notes: noteToInsert}}, next )
+            }
+            
+        });
+    };
+    
+    data.getNotes = function (categoryName, next) {
+        
+        database.getDb(function (err, db) {
+            if (err) {
+                next(err, null);
+            } else {
+                db.notes.findOne({ name: categoryName }, next);
+            }
+            
+        });
+    };
+    
     data.getNoteCategories = function (next) {
         database.getDb(function (err, db) {
             if (err) {
@@ -21,7 +46,6 @@
             
         });
     };
-    
     
     data.createNewCategory = function(categoryName, next){
         database.getDb(function (err, db) {
@@ -66,9 +90,6 @@
         });
     };
     
-
-    
-
     function seedDatabase() {
         database.getDb(function (err, db) {
             if (err) {

@@ -28,7 +28,7 @@
                     req.flash("newCategoryName", err);
                     res.redirect("/");
                 } else {
-                    res.redirect("/notes/" + categoryName);
+                    res.redirect("/api/notes/" + categoryName);
                 }
                 
             });
