@@ -3,3 +3,40 @@
     color: #222222;
     margin-top: 50px;
 }
+
+@import url(http://fonts.googleapis.com/css?family=schoolbell);
+
+.note{
+    display: inline-block;
+    font-family:'schoolbell', cursive;
+    font-size:20px;
+    height:265px;
+    padding:16px 28px;
+    position:relative;
+    vertical-align:text-top;
+    width:265px;
+}
+
+.note-yellow{
+    background: url(../images/note-yellow.png) no-repeat;
+}
+.note-green{
+    background: url(../images/note-green.png) no-repeat;
+}
+.note-blue{
+    background: url(../images/note-blue.png) no-repeat;
+}
+.note-orange{
+    background: url(../images/note-orange.png) no-repeat;
+}
+.note-brown{
+    background: url(../images/note-brown.png) no-repeat;
+}
+
+.note-author{
+    font-family:'Open Sans', Arial, Helvetica, sans-serif;
+    bottom:50px;
+    position:absolute;
+    right:55px;
+    text-align:right;
+}

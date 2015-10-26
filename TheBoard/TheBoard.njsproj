@@ -37,10 +37,16 @@
     <Compile Include="data\index.js" />
     <Compile Include="data\seedData.js" />
     <Compile Include="gruntfile.js" />
+    <Compile Include="public\js\notesView.js" />
     <Compile Include="server.js" />
     <Content Include=".bowerrc" />
     <Content Include="package.json" />
     <Content Include="public\css\site.css" />
+    <Content Include="public\images\note-blue.png" />
+    <Content Include="public\images\note-brown.png" />
+    <Content Include="public\images\note-green.png" />
+    <Content Include="public\images\note-orange.png" />
+    <Content Include="public\images\note-yellow.png" />
     <Content Include="README.md" />
     <Content Include="views\ejs\index.ejs" />
     <Content Include="views\ejs\layout.ejs" />
@@ -48,12 +54,15 @@
     <Content Include="views\jade\index.jade" />
     <Content Include="views\jade\layout.jade" />
     <Content Include="views\layout.vash" />
+    <Content Include="views\notes.vash" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="controllers\" />
     <Folder Include="data\" />
     <Folder Include="public\" />
     <Folder Include="public\css\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\js\" />
     <Folder Include="views\" />
     <Folder Include="views\jade\" />
     <Folder Include="views\ejs\" />
