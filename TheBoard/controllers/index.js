@@ -1,4 +1,5 @@
-﻿(function (controllers) {
+﻿//controllers/index.js
+(function (controllers) {
     
     var homeControllers = require('./homeController.js');
     var noteControllers = require('./notesController.js');

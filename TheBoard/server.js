@@ -15,8 +15,6 @@ var session = require('express-session');
 
 var cookieParser = require('cookie-parser');
 
-var testing = null;
-
 //Setup the View Engine
 
 //jade
@@ -47,7 +45,11 @@ app.use(flash());
 
 
 //set the public static resource folder
-app.use(express.static(__dirname+"\\public"));
+app.use(express.static(__dirname + "\\public"));
+
+//User authentication
+var auth = require("./auth");
+auth.init(app);
 
 //init controllers
 controllers.init(app);
