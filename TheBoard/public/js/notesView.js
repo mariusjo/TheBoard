@@ -21,6 +21,21 @@
                     //TODO
                 alert(err);
             });
+            
+            //socket.io-client is exposed through the notes.vash view
+            var socket = io.connect();
+            
+            //socket.on("showThis", function (msg) {
+            //    alert(msg);
+            //});
+            
+            socket.emit("join category", categoryName);
+            
+            socket.on("broadcast note", function (note) {
+                $scope.notes.push(note);
+                //tell angular to apply, since were not inside of a angular piece of code
+                $scope.$apply();
+            });
 
             $scope.save = function () {
                 $http.post(notesUrl, $scope.newNote).
@@ -28,6 +43,8 @@
                     //success   
                     $scope.notes.push(result.data);
                     $scope.newNote = createBlankNote();
+                    //broadcast the change
+                    socket.emit("newNote", {category: categoryName, note: result.data});
                 }, function (err) {
                     //Error   
                     //TODO

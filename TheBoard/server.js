@@ -70,3 +70,7 @@ app.get("/api/users", function (req, res) {
 var server = http.createServer(app);
 
 server.listen(3000);
+
+//sockets.io.. attact to server
+var updater = require('./updater');
+updater.init(server);
