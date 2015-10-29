@@ -108,12 +108,7 @@
             if (err) {
                 next(err, null);
             } else {
-                db.users.findOne({ username: username }, function (err, user) {
-                       if (err) {
-                        next(err, null);
-                       }
-                       
-                });
+                db.users.findOne({ name: username }, next);
             }
             
         });
